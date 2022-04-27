@@ -1,21 +1,18 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from "./components/Home.vue";
+// import MapComponent from "./components/map.component.vue";
+// import NewsComponent from "./components/news.component.vue";
 </script>
 
 <template>
-  <img class="mx-auto" alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <main class="">
+    <p>some nice text</p>
+    <p>some nice text</p>
+    <p>some nice text</p>
+    <p>some nice text</p>
+    <p>some nice text</p>
+    <p>some nice text</p>
+    <p>some nice text</p>
+    <p>some nice text</p>
+  </main>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
