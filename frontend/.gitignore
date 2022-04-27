@@ -13,6 +13,7 @@
 *.sw?
 *.code-workspace
 
+.DS_Store
 #benchmarks
 .clinic/
 

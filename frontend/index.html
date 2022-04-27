@@ -20,7 +20,7 @@
                     <a class="viewBtn" id="Open">Open</a>
                     <a class="viewBtn" id="OpenOverlay">Open Overlay</a>
                     <a class="viewBtn" id="SaveBitmap">Save Bitmap</a>
-                    <a class="divider" id="About">About</a>
+                    <a href="/#/about" class="divider" id="About">About</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -434,30 +434,6 @@
                     //alert("Surfice by Chris Rorden");
                     return;
                 }
-                if (event.target.id === "About") {
-                    alert("Surfice by Chris Rorden");
-                    /*code below saves mz3 mesh
-                    //console.log(mesh.geometry.attributes.position.array.length);
-                    //window.open( 'https://www.mccauslandcenter.sc.edu/crnl/', '_blank' )
-                    nvert = mesh.geometry.attributes.position.array.length / 3;
-                    hdrBytes = 16;
-                    var buffer = new ArrayBuffer(16+ (nvert * 4));
-                    var view = new DataView(buffer);
-                    view.setUint16(0, 23117, true); //magic - true: mz3 ALWAYS little endian!
-                    var attr = 8; //scalar!
-                    view.setUint16(2, attr, true);
-                    var nface = 0;
-                    view.setUint32(4, nface, true);
-                    view.setUint32(8, nvert, true);
-                    var nskip = 0;
-                    view.setUint32(12, nskip, true);
-                    var _buffer = buffer;
-                    var positions = new Float32Array(_buffer, 16,nvert, true);
-                    for ( var i = 0; i < nvert; i ++ )
-                      positions[i] = i;
-                    saveByteArray([buffer], 'example.mz3');*/
-                    return;
-                }
                 if (event.target.id === "SaveBitmap") {
                     var imgData;
                     try {
@@ -527,5 +503,6 @@
         </script>
     </div>
 </body>
+
 
 </html>
