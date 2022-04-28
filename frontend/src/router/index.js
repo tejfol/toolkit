@@ -11,6 +11,11 @@ const routes = [
     name: "About",
     component: (_) => import("../views/about/index.vue"),
   },
+  {
+    path: "/mni",
+    name: "MNI",
+    component: (_) => import("../views/mni/index.vue"),
+  },
 ];
 
 const router = createRouter({

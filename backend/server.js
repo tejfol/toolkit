@@ -28,4 +28,13 @@ app.get("/api/wo_tumors", async (req, res) => {
   res.send(files);
 });
 
+app.get("/api/mni", async (req, res) => {
+  const url = path.resolve(__dirname, "../frontend/src/units/mni");
+  const files = await getFiles(url);
+  files.forEach((element) => {
+    element.src = "./src/units/mni/" + element.name;
+  });
+  res.send(files);
+});
+
 app.listen(8080, console.log("Running on: http://localhost:8080/"));

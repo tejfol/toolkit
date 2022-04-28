@@ -19,6 +19,12 @@
       <router-link
         exact-active-class="underline"
         class="transition-all px-4 hover:underline"
+        to="mni"
+        >MNI</router-link
+      >
+      <router-link
+        exact-active-class="underline"
+        class="transition-all px-4 hover:underline"
         to="about"
         >About</router-link
       >
