@@ -5,6 +5,12 @@ module.exports = {
       colors: {
         "main-blue": "#44ABDA",
       },
+      height: {
+        128: "32rem",
+      },
+      width: {
+        128: "32rem",
+      },
     },
   },
   plugins: [],

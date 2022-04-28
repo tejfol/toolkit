@@ -1,7 +1,7 @@
 <template>
   <header
     class="
-      h-12
+      h-16
       flex
       bg-gradient-to-r
       from-sky-800

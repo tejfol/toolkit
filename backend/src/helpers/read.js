@@ -1,6 +1,7 @@
-import fs from "fs";
+const fs = require("fs");
+// const path = require("path");
 
-export function getFiles(dir) {
+function getFiles(dir) {
   // get all 'files' in this directory
   var all = fs.readdirSync(dir);
 
@@ -12,6 +13,8 @@ export function getFiles(dir) {
       return getFiles(`${dir}/${file}`);
     }
     // WARNING! I could be something else here!!!
-    return `${dir}/${file}`; // file name (see warning)
+    return { src: `${dir}/${file}`, name: file }; // file name (see warning)
   });
 }
+
+module.exports = { getFiles };

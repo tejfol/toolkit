@@ -1,0 +1,60 @@
+#ide
+# /.vscode # include
+/.idea
+/*.code-workspace
+
+# Editor directories and files
+.idea
+# .vscode # include
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.code-workspace
+
+.DS_Store
+#benchmarks
+.clinic/
+
+#modules
+node_modules
+package-lock.json
+
+#temp dirs
+local/
+temp/
+tmp/
+
+#build
+build/
+dist/
+public/js
+public/css
+public/img
+public/libs
+
+#env files
+deploy.env
+.env
+
+#devtools
+.eslintcache
+
+#logs
+*.log
+
+#static
+assets/
+
+#sitemaps
+backend/sitemaps/sitemap.xml*
+
+
+#keys
+backend/keys/**/*.key*
+
+#dynamic sources
+frontend/ejs/src/views/common/components/base/_preloads.ejs
+frontend/ejs/src/views/common/components/base/_scripts.ejs
+frontend/ejs/src/views/common/components/base/_styles.ejs

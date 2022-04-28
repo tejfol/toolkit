@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full h-96 grid grid-cols-2">
-    <div class="w-full h-96 space-y-2">
+  <div class="w-full h-128 grid grid-cols-3">
+    <div class="w-full h-128 space-y-1 col-span-2">
       <img
         :src="someImage"
         class="w-full h-full object-contain bg-black"
@@ -14,16 +14,24 @@
         min="0"
         :max="images.length - 1"
         type="range"
+        id="range"
       />
+      <label class="text-center block" for="range"
+        >{{ this.value }}/{{ images.length - 1 }}</label
+      >
     </div>
-    <div class="px-4">
-      <base-button @click="loadTumors">Load Tumors</base-button>
+    <div class="px-4 flex flex-col space-y-2">
+      <base-button @click="this.loadTumors">Load Tumors</base-button>
+      <base-button @click="this.load_wo_Tumors"
+        >Load Without Tumors</base-button
+      >
     </div>
   </div>
 </template>
 
 <script>
-import { getFiles } from "../../helpers/read";
+import axios from 'axios';
+
 export default {
   name: "SliderImages",
 
@@ -32,38 +40,8 @@ export default {
       value: 0,
       images: [
         {
-          src: "https://w.wallhaven.cc/full/72/wallhaven-7279ey.jpg",
-        },
-        {
-          src: "https://w.wallhaven.cc/full/1k/wallhaven-1ky1r1.jpg",
-        },
-        {
-          src: "https://w.wallhaven.cc/full/z8/wallhaven-z86zdy.jpg",
-        },
-        {
-          src: "https://w.wallhaven.cc/full/y8/wallhaven-y8o5gk.jpg",
-        },
-        {
-          src: "https://w.wallhaven.cc/full/28/wallhaven-28ldgg.jpg",
-        },
-        {
-          src: "https://w.wallhaven.cc/full/wq/wallhaven-wqj1pp.jpg",
-        },
-        {
-          src: "https://w.wallhaven.cc/full/l3/wallhaven-l3pzpq.png",
-        },
-        {
-          src: "https://w.wallhaven.cc/full/9m/wallhaven-9mpzwk.jpg",
-        },
-        {
-          src: "https://w.wallhaven.cc/full/y8/wallhaven-y8o5rd.jpg",
-        },
-        {
-          src: "https://w.wallhaven.cc/full/m9/wallhaven-m9ezr9.png",
-        },
-        {
-          src: "https://w.wallhaven.cc/full/72/wallhaven-7279ey.jpg",
-        },
+          src: 'https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png'
+        }
       ],
     };
   },
@@ -72,20 +50,40 @@ export default {
     changedImage() {
       this.value = this.$refs.range.value;
     },
-    async loadTumors() {
-      // const items = [];
-      // for (let i = 1; i < 183; i++) {
-      //   items.push({ src: "./src/assets/tumors/" + "Y" + i + ".jpg" });
-      // }
-      console.log();
-      console.log(items);
-      console.log(await getFiles("../../assets/tumors"));
-      this.images = items;
+    async loadImages(kind) {
+      if(kind === 'tumors'){
+        const {data} = await axios.get('http://localhost:8080/api/tumors', )
+        console.log(data);
+        this.value = 0;
+        return data;
+      }
+
+      if(kind === 'wo_tumors'){
+        const {data} = await axios.get('http://localhost:8080/api/wo_tumors', )
+        console.log(data);
+        this.value = 0;
+        return data;
+      }
     },
+
+    async loadTumors() {
+      this.images = await this.loadImages('tumors')
+    },
+
+    async load_wo_Tumors() {
+      this.images = await this.loadImages('wo_tumors')
+    },
+  },
+
+
+
+  async mounted () {
+    this.images = await this.loadImages('tumors');
   },
 
   computed: {
     someImage() {
+      console.log(this.images[this.value].src);
       return this.images[this.value].src;
     },
   },
