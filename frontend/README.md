@@ -1,3 +1,3 @@
 # University diploma project
 
-Scientific visualization.
+Scientific visualization of the brain.
