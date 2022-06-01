@@ -44,9 +44,6 @@ deploy.env
 #logs
 *.log
 
-#static
-assets/
-
 #sitemaps
 backend/sitemaps/sitemap.xml*
 
