@@ -2,7 +2,7 @@
 
 Diploma project.
 
-To run the project locally:\
+To run the project locally:
 
 `git clone https://github.com/tejfol/toolkit.git`
 
