@@ -1,6 +1,8 @@
 <template>
   <base-header class="sticky top-0" />
-  <main class="container mx-auto min-h-screen text-lg bg-white">
+  <main
+    class="container mx-auto min-h-screen overflow-auto text-lg pb-4 bg-white"
+  >
     <router-view />
   </main>
 </template>

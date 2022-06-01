@@ -9,7 +9,7 @@
       text-white text-xl
     "
   >
-    <nav class="m-auto container">
+    <nav class="m-auto container flex justify-center">
       <router-link
         exact-active-class="underline"
         class="transition-all pr-4 hover:underline"
@@ -19,14 +19,20 @@
       <router-link
         exact-active-class="underline"
         class="transition-all px-4 hover:underline"
-        to="mni"
-        >MNI</router-link
+        to="mri"
+        >MRI</router-link
       >
       <router-link
         exact-active-class="underline"
         class="transition-all px-4 hover:underline"
         to="about"
         >About</router-link
+      >
+      <router-link
+        exact-active-class="underline"
+        class="transition-all px-4 hover:underline"
+        to="faq"
+        >FAQ</router-link
       >
     </nav>
   </header>

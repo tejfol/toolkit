@@ -47,7 +47,7 @@
     "class-methods-use-this": 0,
     "max-classes-per-file": ["error", 7],
     "no-param-reassign": ["error", { "props": false }],
-    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-plus": ["error", { "allowForLoopAfterthoughts": true }],
     "consistent-return": "off",
     "comma-dangle": [
       "error",

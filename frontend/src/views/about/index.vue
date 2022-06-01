@@ -1,5 +1,5 @@
 <template>
-  <div class="p -4 space-y-4">
+  <div class="p-4 space-y-4">
     <h1 class="text-4xl font-bold">About the website.</h1>
     <p class="text-lg">
       The website is the result of diploma work. <br />

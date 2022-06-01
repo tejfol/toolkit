@@ -2,6 +2,7 @@
   <button
     type="button"
     class="
+      transition-all
       px-4
       py-2
       bg-main-blue
@@ -9,7 +10,8 @@
       text-white
       font-semibold
       outline-none
-      border-0
+      border border-transparent
+      hover:bg-white hover:border hover:border-main-blue hover:text-main-blue
     "
   >
     <slot> Click </slot>

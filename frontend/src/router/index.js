@@ -12,9 +12,14 @@ const routes = [
     component: (_) => import("../views/about/index.vue"),
   },
   {
-    path: "/mni",
-    name: "MNI",
-    component: (_) => import("../views/mni/index.vue"),
+    path: "/mri",
+    name: "MRI",
+    component: (_) => import("../views/mri/index.vue"),
+  },
+  {
+    path: "/faq",
+    name: "FAQ",
+    component: (_) => import("../views/faqs/index.vue"),
   },
 ];
 

@@ -1,28 +1,32 @@
 <template>
-  <div class="w-full h-128 grid grid-cols-3">
-    <div class="w-full h-128 space-y-1 col-span-2">
+  <div class="w-full grid grid-cols-1 gap-4">
+    <div class="w-full h-128 space-y-1 relative">
       <img
         :src="someImage"
-        class="w-full h-full object-contain bg-black"
+        class="w-full h-full object-contain bg-black rounded"
         alt="Images"
       />
-      <input
-        class="w-full block"
-        ref="range"
-        @input="changedImage"
-        :value="value"
-        min="0"
-        :max="images.length - 1"
-        type="range"
-        id="range"
-      />
-      <label class="text-center block" for="range"
-        >{{ this.value }}/{{ images.length - 1 }}</label
-      >
+      <div class="floating">
+        <input
+          class="w-full block"
+          ref="range"
+          @input="changedImage"
+          :value="value"
+          min="0"
+          :max="images.length - 1"
+          type="range"
+          id="range"
+        />
+        <label class="justify-center inline-flex" for="range"
+          >{{ this.value }}/{{ images.length - 1 }}</label
+        >
+      </div>
     </div>
-    <div class="px-4 flex flex-col space-y-2">
-      <base-button @click="this.loadTumors">Load Tumors</base-button>
-      <base-button @click="this.load_wo_Tumors"
+    <div class="px-4 flex flex-col lg:flex-row gap-4">
+      <base-button class="w-full" @click="this.loadTumors"
+        >Load Tumors</base-button
+      >
+      <base-button class="w-full" @click="this.load_wo_Tumors"
         >Load Without Tumors</base-button
       >
     </div>
@@ -75,8 +79,6 @@ export default {
     },
   },
 
-
-
   async mounted () {
     this.images = await this.loadImages('tumors');
   },
@@ -89,3 +91,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.floating {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  padding: 8px;
+}
+</style>
