@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 space-y-4">
+  <div class="py-4 px-8 space-y-4">
     <h1 class="text-4xl text-center font-bold">
       <span>FAQs</span>
     </h1>

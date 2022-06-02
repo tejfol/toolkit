@@ -4,7 +4,7 @@
       <canvas id="gl" height="480" width="640"> </canvas>
     </div>
     <hr class="mb-4 mt-2" />
-    <div class="space-y-2 px-4">
+    <div class="space-y-2 px-8">
       <fieldset>
         <label class="font-bold" for="change-volume">Load volume:</label>
         <custom-select
@@ -36,7 +36,7 @@
         />
       </fieldset>
     </div>
-    <div class="mt-4 px-4 space-y-2">
+    <div class="mt-4 px-8 space-y-2">
       <div>
         <h3 class="text-2xl font-semibold">What is an MRI scan?</h3>
         <div class="space-y-1">
