@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bgImage px-8 py-16 text-white space-y-4">
+    <div class="bgImage px-8 py-14 text-white space-y-4">
       <div class="flex gap-2">
         <svg
           class="w-8 h-8 fill-white my-auto"
@@ -29,7 +29,9 @@
     <div class="px-8">
       <div class="space-y-8 pt-6">
         <article class="grid xl:grid-cols-2 grid-cols-1 gap-6 text-justify">
-          <p class="text-lg">
+          <p
+            class="text-lg border-2 border-gray-400/20 shadow-md p-4 rounded-lg"
+          >
             <span class="font-semibold text-4xl">T</span>he brain and the rest
             of the central nervous system are composed of a variety of cells,
             but the primary functional unit is a cell called a neuron. All
@@ -44,7 +46,9 @@
             maximize the number of cells that can pack into our skulls, and
             increasing the quantity of information we can process.
           </p>
-          <p class="text-lg">
+          <p
+            class="text-lg border-2 border-gray-400/20 shadow-md p-4 rounded-lg"
+          >
             <span class="font-semibold text-4xl">O</span>ver hundreds of years,
             scientists have learned much about the brain, including the
             countless methods through which information is transferred from
@@ -65,7 +69,9 @@
         </article>
         <slider-images class="mt-4 mb-8" />
         <article>
-          <p class="text-lg">
+          <p
+            class="text-lg border-2 border-gray-400/20 shadow-md p-4 rounded-lg"
+          >
             <span class="font-semibold text-4xl">H</span>owever, due to the vast
             complexity of the brain, much remains to be discovered. Researchers
             continue to explore the mechanics behind a healthy brain that

@@ -112,9 +112,9 @@
     </main>
     <div id="contact_me">
       <form
-        action="#"
-        method="POST"
-        enctype="multipart/form-data"
+        action="mailto:matei.mark-lukas@student.uzhnu.edu.ua"
+        method="post"
+        enctype="text/plain"
         class="flex flex-col gap-4 lg:w-6/12 mx-auto text-white"
       >
         <div class="text-3xl font-semibold text-center">
@@ -130,6 +130,7 @@
               type="text"
               value=""
               size="30"
+              placeholder="Name"
             />
             <span class="error_message"></span>
           </div>
@@ -142,6 +143,7 @@
               type="text"
               value=""
               size="30"
+              placeholder="Email"
             />
             <span class="error_message"></span>
           </div>
